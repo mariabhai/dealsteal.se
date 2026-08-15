@@ -61,20 +61,7 @@ export default function Home() {
             <span className="hero-line">Prisfel på</span>
             <span className="hero-line hero-amazon">Amazon</span>
           </h1>
-          <div className="hero-actions">
-            <a className="primary-link" href="#fynd">
-              Se dagens fynd
-            </a>
-            <a className="secondary-link" href="#reklam">
-              Affiliate/reklam
-            </a>
-          </div>
         </div>
-      </section>
-
-      <section className="disclosure-banner" aria-label="Allman affiliateinformation">
-        <strong>Amazon-associate:</strong> Som Amazon-associate tjänar jag pengar
-        på kvalificerade köp.
       </section>
 
       <section className="deals-section" id="fynd" aria-labelledby="fynd-title">
