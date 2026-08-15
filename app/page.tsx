@@ -58,12 +58,9 @@ export default function Home() {
         <div className="hero-copy">
           <p className="kicker">Nya Amazon-fynd varje dag</p>
           <h1>
-            Prisfel på <span>Amazon</span>
+            <span className="hero-line">Prisfel på</span>
+            <span className="hero-line hero-amazon">Amazon</span>
           </h1>
-          <p className="hero-text">
-            DealSteal samlar snabba prisfall, misstänkta prisfel och korta
-            kommentarer så att du kan avgöra om fyndet är värt ett klick.
-          </p>
           <div className="hero-actions">
             <a className="primary-link" href="#fynd">
               Se dagens fynd
@@ -72,9 +69,6 @@ export default function Home() {
               Affiliate/reklam
             </a>
           </div>
-        </div>
-        <div className="hero-art" aria-label="DealSteal logotyp">
-          <img src="/brand/ds-mark.png" alt="DealSteal ds-logotyp" />
         </div>
       </section>
 

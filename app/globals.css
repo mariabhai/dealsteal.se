@@ -113,7 +113,7 @@ footer {
 }
 
 .brand-name span,
-.hero h1 span {
+.hero-amazon {
   color: var(--accent);
 }
 
@@ -143,11 +143,7 @@ footer {
 }
 
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.72fr);
-  gap: clamp(28px, 6vw, 72px);
-  align-items: center;
-  padding: clamp(44px, 8vw, 86px) 0 34px;
+  padding: clamp(52px, 9vw, 104px) 0 44px;
 }
 
 .kicker {
@@ -170,18 +166,14 @@ footer {
 }
 
 .hero h1 {
-  max-width: 760px;
-  font-size: clamp(3.2rem, 10vw, 7.8rem);
+  max-width: 980px;
+  font-size: clamp(3.4rem, 12vw, 9.5rem);
   line-height: 0.88;
   text-transform: uppercase;
 }
 
-.hero-text {
-  max-width: 650px;
-  margin: 24px 0 0;
-  color: #34302b;
-  font-size: clamp(1.05rem, 2vw, 1.35rem);
-  line-height: 1.55;
+.hero-line {
+  display: block;
 }
 
 .hero-actions {
@@ -211,20 +203,6 @@ footer {
   padding: 0 18px;
   border: 1px solid #080808;
   background: #ffffff;
-}
-
-.hero-art {
-  display: grid;
-  min-height: 320px;
-  place-items: center;
-  border-left: 3px solid var(--accent);
-}
-
-.hero-art img {
-  width: min(260px, 70vw);
-  height: auto;
-  object-fit: contain;
-  mix-blend-mode: multiply;
 }
 
 .disclosure-banner {
@@ -400,7 +378,6 @@ footer span:first-child {
   }
 
   .site-header,
-  .hero,
   .section-heading,
   .deal-main,
   .affiliate-box,
@@ -427,16 +404,9 @@ footer span:first-child {
     flex: 1;
   }
 
-  .hero,
   .info-grid,
   .affiliate-section {
     grid-template-columns: 1fr;
-  }
-
-  .hero-art {
-    min-height: 220px;
-    border-top: 3px solid var(--accent);
-    border-left: 0;
   }
 
   .section-heading,
