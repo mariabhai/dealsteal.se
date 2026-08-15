@@ -26,13 +26,15 @@ const deals = [
     tag: "Snabb deal",
     url: "https://amazon.se/",
   },
-];
-
-const rules = [
-  "Reklammärkning ska synas innan besökaren klickar.",
-  "Vi skriver egna kommentarer och kopierar inte produkttexter rakt av.",
-  "Vi säger inte att Amazon sponsrar DealSteal.",
-  "Vi kallar bara något prisfel när det finns tydlig grund för det.",
+  {
+    title: "Logitech MX Master 3S",
+    category: "Tillbehör",
+    price: "499 kr",
+    oldPrice: "1 099 kr",
+    note: "Lågt pris för en populär produktivitetsmus. Kontrollera färg och säljare före köp.",
+    tag: "Prisfall",
+    url: "https://amazon.se/",
+  },
 ];
 
 export default function Home() {
@@ -48,9 +50,16 @@ export default function Home() {
           </span>
         </a>
         <nav className="nav-links" aria-label="Sidor">
-          <a href="#fynd">Fynd</a>
-          <a href="#om">Om</a>
-          <a href="#reklam">Reklam</a>
+          <a href="/om-oss">Om oss</a>
+          <a href="#kontakt">Kontakt</a>
+          <a
+            className="instagram-link"
+            href="https://instagram.com/dealsteal.se"
+            rel="noopener noreferrer"
+            aria-label="DealSteal på Instagram"
+          >
+            <span className="instagram-icon" aria-hidden="true" />
+          </a>
         </nav>
       </header>
 
@@ -65,10 +74,7 @@ export default function Home() {
       </section>
 
       <section className="deals-section" id="fynd" aria-labelledby="fynd-title">
-        <div className="section-heading">
-          <p className="kicker">Senaste poster</p>
-          <h2 id="fynd-title">Aktuella fynd</h2>
-        </div>
+        <h2 className="deals-title" id="fynd-title">Senaste fynden</h2>
 
         <div className="deal-list">
           {deals.map((deal) => (
@@ -99,40 +105,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="info-grid" id="om" aria-labelledby="om-title">
+      <footer className="site-footer" id="kontakt">
         <div>
-          <p className="kicker">Om DealSteal</p>
-          <h2 id="om-title">Kort, enkelt och granskat</h2>
+          <h2>dealsteal.se</h2>
           <p>
-            DealSteal är en minimalistisk fyndsida för Amazon-priser. Fokus är
-            korta poster, tydliga knappar och snabb navigering utan brus.
+            Senaste fynden på Amazon. Kontrollera alltid pris, lager och villkor
+            hos Amazon innan köp.
+          </p>
+          <p className="associate-copy">
+            Som Amazon-associate tjänar jag pengar på kvalificerade köp.
           </p>
         </div>
-        <div className="rule-list" aria-label="Publiceringsregler">
-          {rules.map((rule) => (
-            <p key={rule}>{rule}</p>
-          ))}
-        </div>
-      </section>
-
-      <section className="affiliate-section" id="reklam" aria-labelledby="reklam-title">
         <div>
-          <p className="kicker">Affiliate/reklam</p>
-          <h2 id="reklam-title">Tydligt innan klick</h2>
+          <h3>Kontakta oss</h3>
+          <button className="contact-button" type="button">Kontakta oss</button>
         </div>
-        <p>
-          Länkar till Amazon markeras med "Reklamlänk" eller "Betald länk" nära
-          själva länken. Det betyder att DealSteal kan få ersättning om du gör
-          ett kvalificerat köp via länken, utan extra kostnad för dig.
-        </p>
-        <p>
-          Som Amazon-associate tjänar jag pengar på kvalificerade köp.
-        </p>
-      </section>
-
-      <footer>
-        <span>dealsteal.se</span>
-        <span>Som Amazon-associate tjänar jag pengar på kvalificerade köp.</span>
+        <div>
+          <h3>Följ oss</h3>
+          <a
+            className="instagram-link"
+            href="https://instagram.com/dealsteal.se"
+            rel="noopener noreferrer"
+            aria-label="DealSteal på Instagram"
+          >
+            <span className="instagram-icon" aria-hidden="true" />
+          </a>
+        </div>
       </footer>
     </main>
   );
